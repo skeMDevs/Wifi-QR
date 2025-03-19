@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wi-Fi QR Code</title>
+    <title>Global WiFi Lounge</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 </head>
 <body>
-    <h2>Scan to Connect to Wi-Fi or Type the Code</h2>
+    <h2>Scan to Connect to Wi-Fi Lounge</h2>
     <canvas id="qr"></canvas>
     <p id="wifiDetails">Fetching Wi-Fi details...</p>
 
@@ -20,7 +20,7 @@
 
                 let wifiConfig = `WIFI:T:WPA;S:${ssid.trim()};P:${password.trim()};;`;
 
-                document.getElementById("wifiDetails").textContent = `Wifi Name: ${ssid}, Wifi Code: ${password}`;
+                document.getElementById("wifiDetails").textContent = `SSID: ${ssid}, Password: ${password}`;
 
                 let qr = new QRious({
                     element: document.getElementById('qr'),
